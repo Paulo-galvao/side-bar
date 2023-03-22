@@ -1,0 +1,151 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root
+{
+    --main-blue: #7393B3;
+    --hover-blue: #0096FF;
+    --hover-bg-black: #36454F;
+}
+
+body
+{
+    background: #343434;
+    height: 99vh;
+}
+
+/*
+    botão menu
+*/
+#menu-btn 
+{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border: none;
+    background: #343434;
+    outline: none;
+}
+#menu-btn i
+{
+    color: var(--main-blue);
+    font-size: 3em;
+    cursor: pointer;
+    transition: color .5s ease-out, font-size .5s ease-out;
+}
+#menu-btn i:hover
+{
+    color: var(--hover-blue);
+    font-size: 3.3em;
+}
+
+/*
+    botão close(x)
+*/
+
+#close-btn
+{
+    cursor: pointer;
+    border: none;
+    background: #343434;
+    outline: none;
+}
+#close-btn .bx-x 
+{
+    color: red;
+    font-size: 2em;
+    transition: font-size .5s ;
+}
+#close-btn .bx-x:hover
+{
+    font-size: 2.3em;
+}
+
+/*
+    barra de navegação lateral 
+*/
+.side-bar
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 350px;
+    padding: 0 20px;
+    translate: -100%;
+    transition: all .5s ease-out ;
+}
+.open-side-bar{
+    translate: 0;
+}
+
+.nav-title
+{
+    display: flex;
+    justify-content: space-between;
+    background: #343434;
+}
+
+.logo
+{
+    color: #1F51FF;
+    font-size: 1.8em;
+    display: block;
+    height: 2.2em;
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.list-item
+{
+    height: 2.2em;
+    list-style: none;
+    padding: 10px 0;
+    transition: background .3s ease-in;
+    width: 100%;
+}
+.list-item a{
+    color: var(--main-blue);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    display: block;
+    transition: color .5s ease-in;
+    padding: 0;
+}
+
+.list-item a:hover, .list-item:hover
+{
+    color: var(--hover-blue);
+    background: var(--hover-bg-black);
+}
+
+.icons
+{
+    text-align: center;
+    
+}
+.icons i
+{
+    font-size: 1.8em;
+    color: var(--main-blue);
+    margin: 0 5px;
+    transition: color .5s ease-out;
+}
+.icons i:hover
+{
+    color: var(--hover-blue);
+}
+
+@media screen and (max-width:690px) {
+    .side-bar{
+        width: 100%;
+        z-index: 1;
+        padding: 0;
+    }
+}
